@@ -4,7 +4,7 @@ Manage Elasticsearch temporal indices with rollover strategy
 
 ## Usage
 
-`
+```
 Usage:
   rolles [command]
 
@@ -17,11 +17,11 @@ Flags:
   -h, --help   help for rolles
 
 Use "rolles [command] --help" for more information about a command.
-`
+```
 
 ### rolles alias
 
-`
+```
 Manage ES indices via their aliases
 
 Usage:
@@ -39,12 +39,12 @@ Flags:
   -p, --prefix string   alias name prefix (default "default")
 
 Use "rolles alias [command] --help" for more information about a command.
-`
+```
 
 
 ### rolles template
 
-`
+```
 Manage ES templates
 
 Usage:
@@ -62,4 +62,4 @@ Flags:
   -d, --temp-dir string   root template directory (default "./templates")
 
 Use "rolles template [command] --help" for more information about a command.
-`
+```
