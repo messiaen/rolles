@@ -2,6 +2,13 @@
 
 Manage Elasticsearch temporal indices with rollover strategy
 
+## Build
+```
+git clone https://github.com/messiaen/rolles.git
+cd rolles
+make install
+```
+
 ## Usage
 
 ```

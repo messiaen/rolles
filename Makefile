@@ -3,12 +3,16 @@ VERSION = 0.0.1
 default: clean build
 
 clean:
-	@rm -f rolles
+	rm -f rolles
 
 rolles:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o rolles github.com/messiaen/rolles/cmd/rolles
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/messiaen/rolles/cmd/rolles
 
 build: rolles
+
+.PHONY: install
+install: clean
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go install -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/messiaen/rolles/cmd/rolles
 
 # Docker
 IMAGE_NAME = "messiaen/rolles"
