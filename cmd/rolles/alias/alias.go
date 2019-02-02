@@ -14,9 +14,6 @@ func NewAliasCmd() *cobra.Command {
 		Long:  ``,
 	}
 
-	// defaultOpts := NewDefaultAliasOptions()
-	// defaultOpts.BindFlags(ccmd.PersistentFlags())
-
 	flags := ccmd.PersistentFlags()
 
 	o.EsOptions.BindFlags(flags)
@@ -32,5 +29,6 @@ func NewAliasCmd() *cobra.Command {
 
 	ccmd.AddCommand(NewPutCmd(&o))
 	ccmd.AddCommand(NewDelCmd(&o))
+	ccmd.AddCommand(NewRolloverCmd(&o))
 	return ccmd
 }

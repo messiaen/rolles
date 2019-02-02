@@ -10,6 +10,11 @@ rolles:
 
 build: rolles
 
+.PHONY: test
+test:
+	go test ./...
+
+
 .PHONY: install
 install: clean
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go install -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/messiaen/rolles/cmd/rolles
