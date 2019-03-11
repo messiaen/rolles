@@ -29,6 +29,6 @@ func NewAliasCmd() *cobra.Command {
 
 	ccmd.AddCommand(NewPutCmd(&o))
 	ccmd.AddCommand(NewDelCmd(&o))
-	ccmd.AddCommand(NewRolloverCmd(&o))
+	//ccmd.AddCommand(NewRolloverCmd(&o))
 	return ccmd
 }
