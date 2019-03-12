@@ -3,7 +3,7 @@ templates/
 test_data/
 
 # Binaries
-rolles
+/rolles
 
 # VSCode
 .vscode/
